@@ -18,7 +18,7 @@ using XYZCorp.ParkingLot.BusinessLogic.Interfaces;
 using XYZCorp.ParkingLot.DataStore.Interfaces;
 using XYZCorp.ParkingLot.DataStore.SQL;
 
-namespace AYZCorp.ParkingLot.API
+namespace AYZCorp.ParkingLot.API 
 {
     public class Startup
     {
