@@ -19,10 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\XYZCorp.ParkingLot.Logic\XYZCorp.ParkingLot.BusinessLogic.csproj" />
     <ProjectReference Include="..\XYZCorp.ParkingLot.DataStore\XYZCorp.ParkingLot.DataStore.csproj" />
     <ProjectReference Include="..\XYZCorp.ParkingLot.Domain\XYZCorp.ParkingLot.Domain.csproj" />
     <ProjectReference Include="..\XYZCorp.ParkingLot.DTO\XYZCorp.ParkingLot.DTO.csproj" />
+    <ProjectReference Include="..\XYZCorp.ParkingLot.Logic\XYZCorp.ParkingLot.BusinessLogic.csproj" />
   </ItemGroup>
 
 </Project>
