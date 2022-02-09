@@ -15,9 +15,8 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using XYZCorp.ParkingLot.BusinessLogic;
 using XYZCorp.ParkingLot.BusinessLogic.Interfaces;
-using XYZCorp.ParkingLot.DataStore;
-using XYZCorp.ParkingLot.DataStore.DataStores;
-using XYZCorp.ParkingLot.DataStore.DataStores.Interfaces;
+using XYZCorp.ParkingLot.DataStore.Interfaces;
+using XYZCorp.ParkingLot.DataStore.SQL;
 
 namespace AYZCorp.ParkingLot.API
 {
@@ -52,6 +51,7 @@ namespace AYZCorp.ParkingLot.API
             services.AddScoped<IParkingDataStore, ParkingDataStore>();
             services.AddScoped<IMapper, Mapper>();
             services.AddScoped<IParkingBL, ParkingBL>();
+            services.AddScoped<ISlotBL, SlotBL>();
             services.AddSwaggerGen();
             services.AddSwaggerGen(c =>
             {

@@ -4,21 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using XYZCorp.ParkingLot.BusinessLogic;
 using XYZCorp.ParkingLot.BusinessLogic.Interfaces;
-using XYZCorp.ParkingLot.DataStore.DataStores.Interfaces;
+using XYZCorp.ParkingLot.DataStore.Interfaces;
 using XYZCorp.ParkingLot.Domain;
 using XYZCorp.ParkingLot.DTO;
 using XYZCorp.ParkingLot.Utilities;
 using static XYZCorp.ParkingLot.Utilities.Enums;
 
-namespace XYZCorp.ParkingLot.DataStore.DataStores
+namespace XYZCorp.ParkingLot.DataStore.SQL
 {
-    public class ParkingDataStore : BaseDataStore, IParkingDataStore
+    public class ParkingDataStore : BaseSQLDatastore, IParkingDataStore
     {
         private readonly IParkingBL parkingBL;
         private readonly ISlotBL slotBL;
-        public ParkingDataStore(SqlDbContext context, IMapper mapper, IParkingBL parkingBL, ISlotBL slotBL) : base(context, mapper) 
+
+        public ParkingDataStore(SqlDbContext context, IMapper mapper, IParkingBL parkingBL, ISlotBL slotBL) : base(context, mapper)
         {
             this.parkingBL = parkingBL;
             this.slotBL = slotBL;

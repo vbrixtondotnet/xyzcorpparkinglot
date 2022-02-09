@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace XYZCorp.ParkingLot.DataStore.Migrations
+namespace XYZCorp.ParkingLot.DataStore.SQL.Migrations
 {
     public partial class initial : Migration
     {

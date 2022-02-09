@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using XYZCorp.ParkingLot.DataStore.DataStores;
-using XYZCorp.ParkingLot.DataStore.DataStores.Interfaces;
+using XYZCorp.ParkingLot.DataStore.Interfaces;
 using XYZCorp.ParkingLot.DTO;
 
 namespace AYZCorp.ParkingLot.API.Controllers

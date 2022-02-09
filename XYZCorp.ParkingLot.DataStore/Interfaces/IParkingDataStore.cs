@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using XYZCorp.ParkingLot.DTO;
 
-namespace XYZCorp.ParkingLot.DataStore.DataStores.Interfaces
+namespace XYZCorp.ParkingLot.DataStore.Interfaces
 {
     public interface IParkingDataStore : IBaseDataStore
     {
