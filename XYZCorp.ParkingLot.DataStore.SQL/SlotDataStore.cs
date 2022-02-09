@@ -2,20 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using XYZCorp.ParkingLot.BusinessLogic;
 using XYZCorp.ParkingLot.BusinessLogic.Interfaces;
-using XYZCorp.ParkingLot.DataStore.DataStores.Interfaces;
-using XYZCorp.ParkingLot.Domain;
+using XYZCorp.ParkingLot.DataStore.Interfaces;
 using XYZCorp.ParkingLot.DTO;
 
-namespace XYZCorp.ParkingLot.DataStore.DataStores
+namespace XYZCorp.ParkingLot.DataStore.SQL
 {
-    public class SlotDataStore : BaseDataStore, ISlotDataStore
+    public class SlotDataStore : BaseSQLDatastore, ISlotDataStore
     {
         private readonly ISlotBL slotBL;
-        public SlotDataStore(SqlDbContext context, IMapper mapper, ISlotBL slotBL) : base(context, mapper) {
+        public SlotDataStore(SqlDbContext context, IMapper mapper, ISlotBL slotBL) : base(context, mapper)
+        {
             this.slotBL = slotBL;
         }
 

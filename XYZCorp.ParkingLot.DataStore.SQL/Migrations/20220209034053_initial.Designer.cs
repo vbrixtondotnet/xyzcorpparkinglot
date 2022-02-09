@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using XYZCorp.ParkingLot.DataStore;
+using XYZCorp.ParkingLot.DataStore.SQL;
 
-namespace XYZCorp.ParkingLot.DataStore.Migrations
+namespace XYZCorp.ParkingLot.DataStore.SQL.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
-    [Migration("20220208082140_initial")]
+    [Migration("20220209034053_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

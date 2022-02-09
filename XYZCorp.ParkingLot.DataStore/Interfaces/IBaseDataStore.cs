@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XYZCorp.ParkingLot.DataStore.DataStores.Interfaces
+namespace XYZCorp.ParkingLot.DataStore.Interfaces
 {
     public interface IBaseDataStore
     {

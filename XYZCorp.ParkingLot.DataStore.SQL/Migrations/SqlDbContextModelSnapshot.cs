@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using XYZCorp.ParkingLot.DataStore;
+using XYZCorp.ParkingLot.DataStore.SQL;
 
-namespace XYZCorp.ParkingLot.DataStore.Migrations
+namespace XYZCorp.ParkingLot.DataStore.SQL.Migrations
 {
     [DbContext(typeof(SqlDbContext))]
     partial class SqlDbContextModelSnapshot : ModelSnapshot

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using XYZCorp.ParkingLot.Domain;
 
-namespace XYZCorp.ParkingLot.DataStore
+namespace XYZCorp.ParkingLot.DataStore.SQL
 {
     public class SqlDbContext : DbContext
     {

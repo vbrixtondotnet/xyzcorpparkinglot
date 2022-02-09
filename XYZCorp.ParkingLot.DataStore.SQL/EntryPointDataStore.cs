@@ -2,22 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using XYZCorp.ParkingLot.BusinessLogic;
 using XYZCorp.ParkingLot.BusinessLogic.Interfaces;
-using XYZCorp.ParkingLot.DataStore.DataStores.Interfaces;
-using XYZCorp.ParkingLot.Domain;
+using XYZCorp.ParkingLot.DataStore.Interfaces;
 using XYZCorp.ParkingLot.DTO;
-using XYZCorp.ParkingLot.Utilities;
 using static XYZCorp.ParkingLot.Utilities.Enums;
 
-namespace XYZCorp.ParkingLot.DataStore.DataStores
+namespace XYZCorp.ParkingLot.DataStore.SQL
 {
-    public class EntryPointDataStore : BaseDataStore, IEntryPointDataStore
+    public class EntryPointDataStore : BaseSQLDatastore, IEntryPointDataStore
     {
         private readonly ISlotBL slotBL;
-        public EntryPointDataStore(SqlDbContext context, IMapper mapper, ISlotBL slotBL) : base(context, mapper) {
+        public EntryPointDataStore(SqlDbContext context, IMapper mapper, ISlotBL slotBL) : base(context,mapper) {
             this.slotBL = slotBL;
         }
 
@@ -43,7 +38,7 @@ namespace XYZCorp.ParkingLot.DataStore.DataStores
             return (List<T>)Convert.ChangeType(retval, typeof(List<T>));
         }
 
-        List<EntryPointDto> IEntryPointDataStore.GetEntryPoints(int count)
+        public List<EntryPointDto> GetEntryPoints(int count)
         {
             var retval = new List<EntryPointDto>();
             var entryPoints = this.context.EntryPoints.OrderBy(e => e.ID).Take(count).ToList();

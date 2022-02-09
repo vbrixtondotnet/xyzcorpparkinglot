@@ -7,21 +7,18 @@ using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
-using XYZCorp.ParkingLot.DataStore.DataStores.Interfaces;
 
-namespace XYZCorp.ParkingLot.DataStore.DataStores
+namespace XYZCorp.ParkingLot.DataStore.SQL
 {
-    public abstract class BaseDataStore : IBaseDataStore
+    public class BaseSQLDatastore : BaseDataStore
     {
         public readonly SqlDbContext context;
         public readonly IMapper mapper;
-        public BaseDataStore(SqlDbContext context, IMapper mapper)
+        public BaseSQLDatastore(SqlDbContext context, IMapper mapper)
         {
             this.context = context;
             this.mapper = mapper;
         }
-
         protected List<T> ExecuteQuery<T>(string query, Dictionary<string, object> Params = null)
         {
             var currentType = typeof(T);
@@ -67,49 +64,5 @@ namespace XYZCorp.ParkingLot.DataStore.DataStores
 
             return (List<T>)Convert.ChangeType(retval, typeof(List<T>));
         }
-
-        public virtual T ConvertObject<T>(object item)
-        {
-            return (T)Convert.ChangeType(item, typeof(T));
-        }
-
-        public virtual Task<T> Add<T>(object item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public object ConvertToJson(object item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual T Get<T>(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual List<T> GetAll<T>()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string GetId(object item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public virtual Task<T> Update<T>(object item)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        
-
     }
 }

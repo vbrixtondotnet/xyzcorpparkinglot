@@ -19,9 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\XYZCorp.ParkingLot.Logic\XYZCorp.ParkingLot.BusinessLogic.csproj" />
-    <ProjectReference Include="..\..\XYZCorp.ParkingLot.Utilities\XYZCorp.ParkingLot.Utilities.csproj" />
-    <ProjectReference Include="..\XYZCorp.ParkingLot.Domain\XYZCorp.ParkingLot.Domain.csproj" />
     <ProjectReference Include="..\XYZCorp.ParkingLot.DTO\XYZCorp.ParkingLot.DTO.csproj" />
   </ItemGroup>
 
